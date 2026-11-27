@@ -24,4 +24,5 @@ jobs:
           "$RUNNER_TEMP/browser-venv/bin/python" -m pip check
           "$RUNNER_TEMP/browser-venv/bin/python" -m playwright install --with-deps chromium
       - name: Test local demo only
-        run: "$RUNNER_TEMP/browser-venv/bin/python" tests/check_browser.py
+        run: |
+          "$RUNNER_TEMP/browser-venv/bin/python" tests/check_browser.py
